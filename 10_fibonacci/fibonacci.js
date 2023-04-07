@@ -1,18 +1,13 @@
-const fibonacci = function(num,fib=0) {
+const fibonacci = function(fib) {
 
-    if(num<0 || typeof(num)=="string"){
+    fib=parseInt(fib,10)
+
+    if(fib<0 ){
         return "OOPS"
-    }
-
-
-    if(fib==num){
-        return num
-    }
-
-
-    
-    console.log(num)
-    return +fibonacci(num-1)
+    }    
+    if(fib==1 || fib==2)
+    return 1
+    return fibonacci(fib-1)+fibonacci(fib-2)
     
 };
 
